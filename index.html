@@ -175,12 +175,12 @@
                         </div>
                         <div class="col-lg-12">
                             <label for="userName" class="form-label">Cellphone</label>
-                            <input type="text" class="form-control border border-danger" placeholder="" id="userName"
+                            <input type="text" class="form-control border border-danger" placeholder="" id="cellphone"
                                 aria-describedby="emailHelp" required>
                         </div>
                         <div class="col-12">
                             <label for="userName" class="form-label">Address</label>
-                            <input type="text" class="form-control border border-danger" placeholder="" id="userName"
+                            <input type="text" class="form-control border border-danger" placeholder="" id="address"
                                 aria-describedby="emailHelp" required>
                         </div>
                         <div class="col-12">
@@ -192,7 +192,7 @@
                             <select class="form-control border border-danger" id="sel1">
                                 <option>Select alcohol</option>
                                 <option>Heineken 330ml @ R17</option>
-                                <option>Black Label @ R15</option>
+                                <option>Black Label 330ml @ R15</option>
                                 <option>Corona Extra 355ml @ R19</option>
                                 <option>Savanna Dry 330ml @ R19</option>
                                 <option>Strongbow 330ml @ R17</option>
@@ -202,15 +202,15 @@
                         </div>
                         <div class="col-4">
                             <label for="exampleInputEmail1" class="form-label">quantity</label>
-                            <input type="number" class="form-control border border-danger" placeholder="" id="qty" required>
+                            <input type="number" class="form-control border border-danger" placeholder="" id="qty1" required>
                         </div>
 
                         <div class="col-8">
                             <label for="exampleInputEmail1" class="form-label">2. Select</label>
-                            <select class="form-control border border-danger" id="sel1">
+                            <select class="form-control border border-danger" id="sel2">
                                 <option>Select alcohol</option>
                                 <option>Heineken 330ml @ R17</option>
-                                <option>Black Label @ R15</option>
+                                <option>Black Label 330ml @ R15</option>
                                 <option>Corona Extra 355ml @ R19</option>
                                 <option>Savanna Dry 330ml @ R19</option>
                                 <option>Strongbow 330ml @ R17</option>
@@ -220,16 +220,16 @@
                         </div>
                         <div class="col-4">
                             <label for="exampleInputEmail1" class="form-label">quantity</label>
-                            <input type="number" class="form-control border border-danger" placeholder="" id="qty" required>
+                            <input type="number" class="form-control border border-danger" placeholder="" id="qty2" required>
                         </div>
 
 
                         <div class="col-8">
                             <label for="exampleInputEmail1" class="form-label">3. Select</label>
-                            <select class="form-control border border-danger" id="sel1">
+                            <select class="form-control border border-danger" id="sel3">
                                 <option>Select alcohol</option>
                                 <option>Heineken 330ml @ R17</option>
-                                <option>Black Label @ R15</option>
+                                <option>Black Label 330ml @ R15</option>
                                 <option>Corona Extra 355ml @ R19</option>
                                 <option>Savanna Dry 330ml @ R19</option>
                                 <option>Strongbow 330ml @ R17</option>
@@ -239,13 +239,13 @@
                         </div>
                         <div class="col-4">
                             <label for="exampleInputEmail1" class="form-label">quantity</label>
-                            <input type="number" class="form-control border border-danger" placeholder="" id="qty" required>
+                            <input type="number" class="form-control border border-danger" placeholder="" id="qty3" required>
                         </div>
 
 
                         <div class="col-12">
                             <label for="exampleInputEmail1" class="form-label">Comments</label>
-                            <textarea class="form-control border border-danger" id="exampleFormControlTextarea1" rows="1"></textarea>
+                            <textarea class="form-control border border-danger" id="comments" rows="1"></textarea>
                         </div>
 
                         
@@ -255,7 +255,7 @@
             <div class="row mt-3">
                 <div class="col-lg-8">
                     <div class="col-12">
-                        <button type="submit" class="btn btn-brand">Order Now</button>
+                        <button type="submit" class="btn btn-brand" onclick="submitOrder()">Order Now</button>
                     </div>
                 </div>
             </div>
@@ -268,6 +268,7 @@
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/app.js"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>
