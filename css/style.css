@@ -193,6 +193,19 @@ section {
     color: #fff;
 }
 
+
+.btn-brand2 {
+    border-color: #0764ee;
+    background-color: #0764ee;
+    color: #fff;
+}
+
+.btn-brand2:hover {
+    background-color: #0764ee;
+    border-color: #0d45ad;
+    color: #fff;
+}
+
 .intro {margin-bottom: 36px;
 text-align: center;}
 

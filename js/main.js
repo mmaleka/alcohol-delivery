@@ -1,3 +1,5 @@
+
+
 function submitOrder() {
     console.log("taking order");
     // USER PERSONAL DETAILS
@@ -25,4 +27,10 @@ function submitOrder() {
     comments = document.getElementById("comments").value;
 
     console.log(userName, cellphone, address, age, sel1, qty1, comments);
+    // NOW PUSH THE DATA TO DATABASE AND NOTIFY USER
+
+    const box = document.getElementById('order_form1');
+    // 👇️ removes element from DOM
+    box.style.display = 'none';
+
 }
