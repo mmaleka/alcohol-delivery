@@ -164,15 +164,18 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <div class="intro">
+                    <div class="intro" id="intro_stuff">
                         <h1>Place Order</h1>
                         <p>Feel free to place an order with us and we will deliver as soon as possible</p>
                     </div>
                 </div>
             </div>
-            <div class="row" id="order_form1">
+            <div class="row">
                 <div class="col-lg-8">
-                    <form class="p-lg-5 col-12 row g-3">
+                    <div id="form_received" class="row g-3 p-lg-5 p-4 bg-white theme-shadow">
+                        <h4>Your application was submitted successfully. We will get in touch with you soon</h4>
+                    </div>
+                    <form id="order_form1" class="p-lg-5 col-12 row g-3" onsubmit="return false">
                         <div class="col-lg-12">
                             <label for="userName" class="form-label">Name</label>
                             <input type="text" class="form-control border border-info" placeholder="" id="userName"
@@ -225,7 +228,7 @@
                         </div>
                         <div class="col-4">
                             <label for="exampleInputEmail1" class="form-label">quantity</label>
-                            <input type="number" class="form-control border border-info" placeholder="" id="qty2" required>
+                            <input type="number" class="form-control border border-info" placeholder="" id="qty2">
                         </div>
 
 
@@ -244,7 +247,7 @@
                         </div>
                         <div class="col-4">
                             <label for="exampleInputEmail1" class="form-label">quantity</label>
-                            <input type="number" class="form-control border border-info" placeholder="" id="qty3" required>
+                            <input type="number" class="form-control border border-info" placeholder="" id="qty3">
                         </div>
 
 
@@ -252,21 +255,11 @@
                             <label for="exampleInputEmail1" class="form-label">Comments</label>
                             <textarea class="form-control border border-info" id="comments" rows="1"></textarea>
                         </div>
+
+                        <div class="col-12">
+                            <button class="btn btn-brand" onclick="submitOrder()">Order Now</button>
+                        </div>
                     </form>
-                </div>
-            </div>
-            <div class="row mt-3" id="order_form2">
-                <div class="col-lg-8">
-                    <div class="col-12">
-                        <button type="submit" class="btn btn-brand" onclick="submitOrder()">Order Now</button>
-                    </div>
-                </div>
-            </div>
-            <div class="row mt-3" id="order_form3">
-                <div class="col-lg-8">
-                    <div class="col-12">
-                        <button type="submit" class="btn btn-brand2" onclick="makeanotherOrder()">Place Another Order</button>
-                    </div>
                 </div>
             </div>
         </div>
@@ -278,6 +271,7 @@
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/app.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="js/main.js"></script>
 </body>
 

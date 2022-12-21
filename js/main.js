@@ -1,6 +1,9 @@
 
+user_geolocation()
+var elem = document.getElementById('form_received');
+elem.style.display = 'none';
 
-function submitOrder() {
+async function submitOrder() {
     console.log("taking order");
     // USER PERSONAL DETAILS
     userName = document.getElementById("userName").value;
@@ -28,9 +31,60 @@ function submitOrder() {
 
     console.log(userName, cellphone, address, age, sel1, qty1, comments);
     // NOW PUSH THE DATA TO DATABASE AND NOTIFY USER
+    BASE_URL = "https://vec4ziu7mc.execute-api.us-west-2.amazonaws.com/dev/api-alcoholdelivery/alcohol_delivery_post/"
+    let payload = {
+        name: userName,
+        cellphone: cellphone,
+        address: address,
+        sel1: sel1,
+        qty1: qty1,
+        sel2: sel2,
+        qty2: qty2,
+        sel3: sel3,
+        qty3: qty3,
+        comments: comments
+    };
 
-    const box = document.getElementById('order_form1');
-    // 👇️ removes element from DOM
-    box.style.display = 'none';
+    let res = await axios.post(BASE_URL, payload);
+    console.log(res.status);
+
+    if (res.status == 201) {
+        var form_elem = document.getElementById('order_form1');
+        var intro_stuff = document.getElementById('intro_stuff');
+        form_elem.style.display = 'none'
+        intro_stuff.style.display = 'none'
+        elem.style.display = 'block';
+    } else {
+        alert("invalid form data")
+    }
+
+}
+
+
+
+
+function user_geolocation() {
+    let apiKey = 'bdc_ca918fe3bff4410fa17b5d1efe4c5208';
+    user_action_url = 'https://vec4ziu7mc.execute-api.us-west-2.amazonaws.com/dev/api-analytics/AnalyticsList/';
+
+    params = {
+        key: apiKey
+    }
+    axios.get('https://api.bigdatacloud.net/data/ip-geolocation?key=' + apiKey).then(resp => {
+        updateUserAction(resp);
+    });
+}
+
+
+
+async function updateUserAction(resp) {
+
+    let payload = {
+        page_visited: "alcohol delivery system",
+        user_action: resp.data.ip + "-" + resp.data.location.city,
+    };
+
+    let res = await axios.post(user_action_url, payload);
+    console.log(res);
 
 }
