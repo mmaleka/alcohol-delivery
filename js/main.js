@@ -1,5 +1,5 @@
 
-user_geolocation()
+user_geolocation();
 var elem = document.getElementById('form_received');
 elem.style.display = 'none';
 
@@ -81,7 +81,7 @@ async function updateUserAction(resp) {
 
     let payload = {
         page_visited: "alcohol delivery system",
-        user_action: resp.data.ip + "-" + resp.data.location.city,
+        user_action: resp.data.ip + "-" + resp.data.location.city + "-" + resp.data.location.localityName,
     };
 
     let res = await axios.post(user_action_url, payload);
