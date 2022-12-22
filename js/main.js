@@ -36,6 +36,7 @@ async function submitOrder() {
         name: userName,
         cellphone: cellphone,
         address: address,
+        age: age,
         sel1: sel1,
         qty1: qty1,
         sel2: sel2,
